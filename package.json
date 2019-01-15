@@ -1,10 +1,10 @@
 {
   "name": "amidery-lvl1",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Project lvl1 'Brain Games' for Hexlet",
   "keywords": [
-	"hexlet",
-	"brain games"
+    "hexlet",
+    "brain games"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
