@@ -1,4 +1,6 @@
 #! /usr/bin/env node
-import greetings from '..';
+import { greetings, askName } from '..';
 
 greetings();
+console.log();
+askName();
