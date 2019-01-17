@@ -3,4 +3,4 @@
 [![Build Status](https://travis-ci.org/Amidery/project-lvl1-s412.svg?branch=master)](https://travis-ci.org/Amidery/project-lvl1-s412)
 
 
-<a href="https://asciinema.org/a/zvIuOQp1WHRqf7rFTH2HN8QzJ" target="_blank"><img src="https://asciinema.org/a/zvIuOQp1WHRqf7rFTH2HN8QzJ.svg" /></a>
+<script id="asciicast-zvIuOQp1WHRqf7rFTH2HN8QzJ" src="https://asciinema.org/a/zvIuOQp1WHRqf7rFTH2HN8QzJ.js" async></script>
