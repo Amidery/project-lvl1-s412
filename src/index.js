@@ -11,26 +11,16 @@ export const askName = () => {
   return userName;
 };
 
-export const answerAnalysis = (number, answer) => {
-  let result = '';
+export const calcCorrectAnswer = (question) => {
+  let correctAnswer = '';
 
-  if ((number % 2 === 0 && answer === 'yes') || (number % 2 !== 0 && answer === 'no')) {
-    result = 'Correct!';
+  if (question % 2 === 0) {
+    correctAnswer = 'yes';
+  } else {
+    correctAnswer = 'no';
   }
 
-  if (number % 2 === 0 && answer === 'no') {
-    result = '"no" is wrong answer ;(. Correct answer was "yes".';
-  }
-
-  if (number % 2 !== 0 && answer === 'yes') {
-    result = '"yes" is wrong answer ;(. Correct answer was "no".';
-  }
-
-  if (answer !== 'yes' && answer !== 'no') {
-    result = 'Incorrect input. You need to answer yes/no';
-  }
-
-  return result;
+  return correctAnswer;
 };
 
 export const gameEven = () => {
@@ -40,28 +30,30 @@ export const gameEven = () => {
   const userName = askName();
 
   const game = () => {
-    const steps = 0;
+    const startAttempt = 0;
+    const maxAttempts = 3;
 
-    const iter = (acc) => {
-      if (acc === 3) {
+    const iter = (userAttempts) => {
+      if (userAttempts === maxAttempts) {
         console.log(`Congratulations, ${userName}!`);
         return;
       }
 
-      const number = Math.floor(Math.random() * 101);
-      console.log(`Question: ${number}`);
+      const question = Math.floor(Math.random() * 101);
+      console.log(`Question: ${question}`);
+      const correctAnswer = calcCorrectAnswer(question);
       const answer = readlineSync.question('Your answer: ');
 
-      if (answerAnalysis(number, answer) === 'Correct!') {
-        console.log(answerAnalysis(number, answer));
-        iter(acc + 1);
+      if (correctAnswer === answer) {
+        console.log('Correct!');
+        iter(userAttempts + 1);
       } else {
-        console.log(answerAnalysis(number, answer));
+        console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.`);
         console.log(`Let's try again, ${userName}!`);
       }
     };
 
-    return iter(steps);
+    return iter(startAttempt);
   };
 
   game();
