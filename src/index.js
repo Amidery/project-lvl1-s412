@@ -11,18 +11,6 @@ export const askName = () => {
   return userName;
 };
 
-export const calcCorrectAnswer = (question) => {
-  let correctAnswer = '';
-
-  if (question % 2 === 0) {
-    correctAnswer = 'yes';
-  } else {
-    correctAnswer = 'no';
-  }
-
-  return correctAnswer;
-};
-
 export const gameEven = () => {
   greetings();
   console.log('Answer "yes" if number even otherwise answer "no"');
@@ -41,7 +29,7 @@ export const gameEven = () => {
 
       const question = Math.floor(Math.random() * 101);
       console.log(`Question: ${question}`);
-      const correctAnswer = calcCorrectAnswer(question);
+      const correctAnswer = question % 2 === 0 ? 'yes' : 'no';
       const answer = readlineSync.question('Your answer: ');
 
       if (correctAnswer === answer) {
