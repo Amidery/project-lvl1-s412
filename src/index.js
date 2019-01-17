@@ -11,6 +11,9 @@ export const askName = () => {
   return userName;
 };
 
+const startAttempt = 0;
+const maxAttempts = 3;
+
 export const gameEven = () => {
   greetings();
   console.log('Answer "yes" if number even otherwise answer "no"');
@@ -18,18 +21,17 @@ export const gameEven = () => {
   const userName = askName();
 
   const game = () => {
-    const startAttempt = 0;
-    const maxAttempts = 3;
-
     const iter = (userAttempts) => {
       if (userAttempts === maxAttempts) {
         console.log(`Congratulations, ${userName}!`);
         return;
       }
 
+      const isEven = question => question % 2 === 0;
+
       const question = Math.floor(Math.random() * 101);
       console.log(`Question: ${question}`);
-      const correctAnswer = question % 2 === 0 ? 'yes' : 'no';
+      const correctAnswer = isEven(question) ? 'yes' : 'no';
       const answer = readlineSync.question('Your answer: ');
 
       if (correctAnswer === answer) {
@@ -41,7 +43,7 @@ export const gameEven = () => {
       }
     };
 
-    return iter(startAttempt);
+    iter(startAttempt);
   };
 
   game();
