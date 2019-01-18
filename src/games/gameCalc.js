@@ -1,25 +1,26 @@
 import { cons } from 'hexlet-pairs';
-import { gameLogic } from '..';
+import gameLogic from '..';
+import generateNum from '../utils';
 
-const descriptionCalc = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 
 const game = () => {
-  const operand1 = Math.floor(Math.random() * 101);
-  const operand2 = Math.floor(Math.random() * 101);
-  const operation = Math.floor(Math.random() * 3);
+  const operand1 = generateNum(0, 100);
+  const operand2 = generateNum(0, 100);
+  const operation = generateNum(1, 3);
   let question;
   let correctAnswer;
 
   switch (operation) {
-    case 0:
+    case 1:
       question = `${operand1} * ${operand2}`;
       correctAnswer = operand1 * operand2;
       break;
-    case 1:
+    case 2:
       question = `${operand1} + ${operand2}`;
       correctAnswer = operand1 + operand2;
       break;
-    case 2:
+    default:
       question = `${operand1} - ${operand2}`;
       correctAnswer = operand1 - operand2;
       break;
@@ -27,6 +28,4 @@ const game = () => {
   return cons(question, correctAnswer);
 };
 
-const gameCalc = () => gameLogic(descriptionCalc, game);
-
-export default gameCalc;
+export default () => gameLogic(description, game);

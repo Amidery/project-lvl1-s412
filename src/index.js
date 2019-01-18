@@ -1,13 +1,11 @@
 import readlineSync from 'readline-sync';
 import { car, cdr } from 'hexlet-pairs';
 
-export const greetings = () => {
+const greetings = () => {
   console.log('Welcome to the Brain Games!');
 };
 
-export const showDescription = text => console.log(text);
-
-export const askName = () => {
+const askName = () => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hi, ${userName}!`);
   console.log();
@@ -17,9 +15,9 @@ export const askName = () => {
 const startAttempt = 0;
 const maxAttempts = 3;
 
-export const gameLogic = (description, game) => {
+const gameLogic = (description, game) => {
   greetings();
-  showDescription(description);
+  console.log(description);
   console.log();
   const userName = askName();
 
@@ -47,3 +45,5 @@ export const gameLogic = (description, game) => {
 
   iter(startAttempt);
 };
+
+export default gameLogic;

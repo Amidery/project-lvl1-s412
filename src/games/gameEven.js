@@ -1,16 +1,15 @@
 import { cons } from 'hexlet-pairs';
-import { gameLogic } from '..';
+import gameLogic from '..';
+import generateNum from '../utils';
 
-const descriptionEven = 'Answer "yes" if number even otherwise answer "no"';
+const description = 'Answer "yes" if number even otherwise answer "no"';
 
 const isEven = question => question % 2 === 0;
 
 const game = () => {
-  const question = Math.floor(Math.random() * 101);
+  const question = generateNum(0, 100);
   const correctAnswer = isEven(question) ? 'yes' : 'no';
   return cons(question, correctAnswer);
 };
 
-const gameEven = () => gameLogic(descriptionEven, game);
-
-export default gameEven;
+export default () => gameLogic(description, game);
