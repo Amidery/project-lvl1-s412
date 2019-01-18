@@ -24,7 +24,6 @@ const game = () => {
       correctAnswer = operand1 - operand2;
       break;
   }
- 
   return cons(question, correctAnswer);
 };
 
