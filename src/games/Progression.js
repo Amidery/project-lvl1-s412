@@ -8,7 +8,7 @@ const progressionLength = 10;
 
 const game = () => {
   const firstElement = generateNum(0, 100);
-  const step = generateNum(0, 50);
+  const step = generateNum(1, 50);
   const hiddenNumber = generateNum(1, progressionLength);
 
   const calcProgression = () => {
