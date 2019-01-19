@@ -10,3 +10,6 @@ How to install and play "Mental Calculation" game:
 
 How to install and play "Find the greatest common divisor" game:
 [![asciicast](https://asciinema.org/a/korU3ZYqzxulmTPWp5FhAtyme.svg)](https://asciinema.org/a/korU3ZYqzxulmTPWp5FhAtyme)
+
+How to install and play "What's the missing number?" game:
+[![asciicast](https://asciinema.org/a/ITElghtR5ODfbk0zm3DxuIks6.svg)](https://asciinema.org/a/ITElghtR5ODfbk0zm3DxuIks6)
