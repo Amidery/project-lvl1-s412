@@ -29,7 +29,7 @@ const gameLogic = (description, game) => {
 
     const rules = game();
     const question = car(rules);
-    const correctAnswer = String(cdr(rules));
+    const correctAnswer = cdr(rules);
 
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');

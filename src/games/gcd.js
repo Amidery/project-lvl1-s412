@@ -18,7 +18,7 @@ const game = () => {
   const question = `${operand1} ${operand2}`;
   const correctAnswer = calcGcd(operand1, operand2);
 
-  return cons(question, correctAnswer);
+  return cons(question, `${correctAnswer}`);
 };
 
 export default () => gameLogic(description, game);

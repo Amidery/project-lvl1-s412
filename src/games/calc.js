@@ -25,7 +25,7 @@ const game = () => {
       correctAnswer = operand1 - operand2;
       break;
   }
-  return cons(question, correctAnswer);
+  return cons(question, `${correctAnswer}`);
 };
 
 export default () => gameLogic(description, game);
