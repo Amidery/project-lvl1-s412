@@ -17,7 +17,7 @@ const game = () => {
 
     const iter = (acc, progression) => {
       if (acc === hiddenNumber) {
-        result = `${progression} .. `;
+        result = `${progression} ..`;
       } else {
         result = `${progression} ${firstElement + step * acc}`;
       }
