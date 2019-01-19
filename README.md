@@ -13,3 +13,6 @@ How to install and play "Find the greatest common divisor" game:
 
 How to install and play "What's the missing number?" game:
 [![asciicast](https://asciinema.org/a/ITElghtR5ODfbk0zm3DxuIks6.svg)](https://asciinema.org/a/ITElghtR5ODfbk0zm3DxuIks6)
+
+How to install and play "Is this number prime?" game:
+[![asciicast](https://asciinema.org/a/O4oxciYtR3CBD3NoaXBSQ7aDg.svg)](https://asciinema.org/a/O4oxciYtR3CBD3NoaXBSQ7aDg)
