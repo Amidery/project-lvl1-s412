@@ -6,29 +6,27 @@ const description = 'What number is missing in the progression?';
 
 const progressionLength = 10;
 
+const calcProgression = (firstElement, step, hiddenElementPosition) => {
+  let progression = '';
+
+  for (let i = 0; i <= progressionLength; i += 1) {
+    if (i === hiddenElementPosition) {
+      progression += '.. ';
+    } else {
+      progression += `${firstElement + step * i} `;
+    }
+  }
+
+  return progression.trim();
+};
+
 const game = () => {
   const firstElement = generateNum(0, 100);
   const step = generateNum(1, 50);
   const hiddenElementPosition = generateNum(1, progressionLength);
 
-  const calcProgression = () => {
-    let acc = 1;
-    let progression = '';
-
-    while (acc <= progressionLength) {
-      if (acc === hiddenElementPosition) {
-        progression += '.. ';
-      } else {
-        progression += `${firstElement + step * acc} `;
-      }
-      acc += 1;
-    }
-
-    return progression;
-  };
-
   const correctAnswer = firstElement + step * hiddenElementPosition;
-  const question = calcProgression();
+  const question = calcProgression(firstElement, step, hiddenElementPosition);
 
   return cons(question, `${correctAnswer}`);
 };
